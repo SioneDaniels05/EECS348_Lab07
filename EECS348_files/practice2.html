@@ -1,0 +1,55 @@
+<html>
+<head>
+    <h1>Practice 2</h1>
+</head>
+<style>
+    #paragraph {
+        border-style: solid;
+    }
+</style>
+
+<body>
+    <p id="paragraph">Why did the chicken escape its coop? To eggxercise! I know hilarious.</p>
+    
+    <b> Border R(0-255): </b>
+    <input type="text" id="Border_R" value="">
+    <br> 
+    <b> Border G(0-255): </b>
+    <input type="text" id="Border_G" value="">
+    <br> 
+    <b> Border B(0-255): </b>
+    <input type="text" id="Border_B" value="">
+    <br> 
+    <b> Border Width: </b>
+    <input type="text" id="Width" value="">
+    <br> 
+    <b> Background R(0-255): </b>
+    <input type="text" id="Back_R" value="">
+    <br> 
+    <b> Background G(0-255): </b>
+    <input type="text" id="Back_G" value="">
+    <br> 
+    <b> Background B(0-255): </b>
+    <input type="text" id="Back_B" value="">
+    <br>
+    
+    <button type="button" onclick="run()">CLICK THIS TO CHANGE THE COLOR!</button>
+
+    <script>
+        function run() {
+            const para = document.getElementById('paragraph');
+            const Border_R = document.getElementById("Border_R").value;
+            const Border_G = document.getElementById("Border_G").value;
+            const Border_B = document.getElementById("Border_B").value;
+            const width = document.getElementById("Width").value;
+            const Back_R = document.getElementById("Back_R").value;
+            const Back_G = document.getElementById("Back_G").value;
+            const Back_B = document.getElementById("Back_B").value;
+
+            para.style.borderWidth = `${width}px`;
+            para.style.borderColor = `rgb(${Border_R}, ${Border_G}, ${Border_B})`;
+            para.style.backgroundColor = `rgb(${Back_R}, ${Back_G}, ${Back_B})`;
+        }
+    </script>
+</body>
+</html>

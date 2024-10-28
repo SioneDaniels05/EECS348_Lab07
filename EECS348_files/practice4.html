@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Practice 4</title>
+    <style>
+	body {
+            background-image: url("bikini_bottom.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+	table, tr, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+		background-color: white;
+	}
+	#paragraph {
+		color: black;
+		font-size: 18pt;
+
+	}
+
+    </style>
+</head>
+<body>
+	<h1>Practice 4</h1>
+	<p>Enter the size of the table:</p>
+	<input type="text" id="size">
+	<button type="button" onclick="run()">Submit</button>
+	<div id="paragraph"></div>
+	<script>
+	function run() {
+		const size = parseInt(document.getElementById('size').value);
+		const paragraph = document.getElementById("paragraph");
+		paragraph.innerHTML = '';
+		const table = document.createElement("table");
+		for (let i = 1; i <= size; i++) {
+			const row = document.createElement("tr");
+			for (let b = 1; b <= size; b++){
+				const cell = document.createElement("td");
+				cell.textContent = `${i*b}`;
+				row.appendChild(cell);
+				}
+			table.appendChild(row);
+			}
+		paragraph.appendChild(table);
+		}
+	</script>
+</body>
+</html>
+
